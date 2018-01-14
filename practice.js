@@ -69,7 +69,10 @@ last(names, function(lastName){
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
-//Code Here
+function multiply (num1, num2, cb) {
+  var sum = num1 * num2;
+  return cb(sum);
+}
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -88,7 +91,13 @@ multiply(4, 3, function(answer){
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here 
+function contains (arr, name, cb) {
+  if (arr.includes(name)) {
+    return cb(true);
+  } else {
+    return cb(false);
+  }
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
